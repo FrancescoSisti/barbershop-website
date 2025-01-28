@@ -1,25 +1,7 @@
-<header [class.scrolled]="isScrolled">
-    <div class="header-backdrop"></div>
+<header [class.scrolled]="isScrolled" [class.hidden]="isHidden">
     <div class="header-container">
-        <!-- Logo Section -->
-        <div class="logo-section">
-            <div class="logo-wrapper">
-                <a href="#home" (click)="scrollToSection('home', $event)">
-                    <span class="logo-text">Cipri</span>
-                    <span class="logo-separator"></span>
-                    <span class="logo-accent">Barber</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button class="menu-btn" [class.active]="!isMenuCollapsed" (click)="toggleMenu()">
-            <span></span>
-        </button>
-
-        <!-- Navigation Menu -->
-        <nav [class.open]="!isMenuCollapsed">
-            <div class="nav-backdrop"></div>
+        <!-- Navigation Menu Left -->
+        <nav class="nav-left" [class.open]="!isMenuCollapsed">
             <ul class="nav-list">
                 <li style="--i: 0"><a href="#home" (click)="scrollToSection('home', $event)">
                         <span class="nav-dot"></span>
@@ -33,6 +15,23 @@
                         <span class="nav-dot"></span>
                         <span>Galleria</span>
                     </a></li>
+            </ul>
+        </nav>
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo-wrapper">
+                <a href="#home" (click)="scrollToSection('home', $event)">
+                    <span class="logo-text">Cipri</span>
+                    <span class="logo-separator"></span>
+                    <span class="logo-accent">Barber</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Menu Right -->
+        <nav class="nav-right" [class.open]="!isMenuCollapsed">
+            <ul class="nav-list">
                 <li style="--i: 3"><a href="#reviews" (click)="scrollToSection('reviews', $event)">
                         <span class="nav-dot"></span>
                         <span>Recensioni</span>
@@ -41,25 +40,16 @@
                         <span class="nav-dot"></span>
                         <span>Shop</span>
                     </a></li>
-                <li style="--i: 5"><a href="#contact" (click)="scrollToSection('contact', $event)">
+                <li style="--i: 5"><a href="#booking" (click)="scrollToSection('booking', $event)">
                         <span class="nav-dot"></span>
-                        <span>Contatti</span>
+                        <span>Prenota</span>
                     </a></li>
             </ul>
-
-            <div class="booking-section">
-                <div class="booking-decoration left"></div>
-                <a href="#booking" class="booking-btn" (click)="scrollToSection('booking', $event)">
-                    <span class="booking-text">Prenota Ora</span>
-                    <span class="booking-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14m-7-7 7 7-7 7" />
-                        </svg>
-                    </span>
-                </a>
-                <div class="booking-decoration right"></div>
-            </div>
         </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-btn" [class.active]="!isMenuCollapsed" (click)="toggleMenu()">
+            <span></span>
+        </button>
     </div>
 </header>
