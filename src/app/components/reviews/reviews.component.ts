@@ -48,14 +48,14 @@ declare const AOS: any;
   `,
   styles: [`
     .reviews {
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      background: var(--bg-dark);
     }
 
     .review-card {
-      background: white;
+      background: var(--bg-dark-light);
       padding: 2rem;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       height: 100%;
     }
 
@@ -65,7 +65,7 @@ declare const AOS: any;
     }
 
     .review-text {
-      color: #666;
+      color: var(--text-muted);
       font-style: italic;
       margin-bottom: 1.5rem;
       line-height: 1.6;
@@ -87,23 +87,23 @@ declare const AOS: any;
     .review-info {
       h5 {
         margin: 0;
-        color: #1a1a1a;
+        color: var(--text-light);
       }
 
       small {
-        color: #666;
+        color: var(--text-muted);
       }
     }
 
     .btn-outline-primary {
-      color: #9f6000;
-      border-color: #9f6000;
+      color: var(--primary-color);
+      border-color: var(--primary-color);
       padding: 0.8rem 2rem;
       border-radius: 30px;
 
       &:hover {
-        background: #9f6000;
-        color: white;
+        background: var(--primary-color);
+        color: var(--text-light);
       }
     }
   `]

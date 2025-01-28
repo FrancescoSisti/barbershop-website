@@ -39,14 +39,14 @@ import { NgFor } from '@angular/common';
   `,
   styles: [`
     .shop {
-      background-color: #f8f9fa;
+      background-color: var(--bg-dark);
     }
 
     .product-card {
-      background: white;
+      background: var(--bg-dark-light);
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       height: 100%;
       transition: transform 0.3s ease;
 
@@ -91,18 +91,18 @@ import { NgFor } from '@angular/common';
 
       h3 {
         font-size: 1.2rem;
-        color: #1a1a1a;
+        color: var(--text-light);
         margin-bottom: 0.5rem;
       }
 
       .product-description {
-        color: #666;
+        color: var(--text-muted);
         font-size: 0.9rem;
         margin-bottom: 1rem;
       }
 
       .product-price {
-        color: #9f6000;
+        color: var(--primary-color);
         font-size: 1.25rem;
         font-weight: bold;
         margin: 0;

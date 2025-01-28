@@ -1,1 +1,65 @@
-<p>header works!</p>
+<header [class.scrolled]="isScrolled">
+    <div class="header-backdrop"></div>
+    <div class="header-container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo-wrapper">
+                <a href="#home" (click)="scrollToSection('home', $event)">
+                    <span class="logo-text">Cipri</span>
+                    <span class="logo-separator"></span>
+                    <span class="logo-accent">Barber</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-btn" [class.active]="!isMenuCollapsed" (click)="toggleMenu()">
+            <span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav [class.open]="!isMenuCollapsed">
+            <div class="nav-backdrop"></div>
+            <ul class="nav-list">
+                <li style="--i: 0"><a href="#home" (click)="scrollToSection('home', $event)">
+                        <span class="nav-dot"></span>
+                        <span>Home</span>
+                    </a></li>
+                <li style="--i: 1"><a href="#services" (click)="scrollToSection('services', $event)">
+                        <span class="nav-dot"></span>
+                        <span>Servizi</span>
+                    </a></li>
+                <li style="--i: 2"><a href="#gallery" (click)="scrollToSection('gallery', $event)">
+                        <span class="nav-dot"></span>
+                        <span>Galleria</span>
+                    </a></li>
+                <li style="--i: 3"><a href="#reviews" (click)="scrollToSection('reviews', $event)">
+                        <span class="nav-dot"></span>
+                        <span>Recensioni</span>
+                    </a></li>
+                <li style="--i: 4"><a href="#shop" (click)="scrollToSection('shop', $event)">
+                        <span class="nav-dot"></span>
+                        <span>Shop</span>
+                    </a></li>
+                <li style="--i: 5"><a href="#contact" (click)="scrollToSection('contact', $event)">
+                        <span class="nav-dot"></span>
+                        <span>Contatti</span>
+                    </a></li>
+            </ul>
+
+            <div class="booking-section">
+                <div class="booking-decoration left"></div>
+                <a href="#booking" class="booking-btn" (click)="scrollToSection('booking', $event)">
+                    <span class="booking-text">Prenota Ora</span>
+                    <span class="booking-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </span>
+                </a>
+                <div class="booking-decoration right"></div>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -33,14 +33,14 @@ import { NgFor } from '@angular/common';
   `,
   styles: [`
     .services {
-      background-color: #f8f9fa;
+      background-color: var(--bg-dark);
     }
 
     .service-card {
-      background: white;
+      background: var(--bg-dark-light);
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
 
       &:hover {
@@ -59,17 +59,17 @@ import { NgFor } from '@angular/common';
       text-align: center;
 
       h3 {
-        color: #1a1a1a;
+        color: var(--text-light);
         margin-bottom: 1rem;
       }
 
       p {
-        color: #666;
+        color: var(--text-muted);
         margin-bottom: 1rem;
       }
 
       .price {
-        color: #9f6000;
+        color: var(--primary-color);
         font-size: 1.25rem;
         font-weight: bold;
         margin-bottom: 1.5rem;

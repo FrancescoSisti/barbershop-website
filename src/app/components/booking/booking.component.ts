@@ -70,41 +70,49 @@ import { NgFor } from '@angular/common';
   `,
   styles: [`
     .booking {
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      background: var(--bg-dark);
     }
 
     .booking-form {
-      background: white;
+      background: var(--bg-dark-light);
       padding: 3rem;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
     .form-label {
-      color: #1a1a1a;
+      color: var(--text-light);
       font-weight: 500;
     }
 
     .form-control, .form-select {
+      background-color: var(--bg-dark-lighter);
       padding: 0.8rem;
       border-radius: 8px;
-      border: 1px solid #dee2e6;
+      border: 1px solid var(--gray-300);
+      color: var(--text-light);
 
       &:focus {
-        border-color: #9f6000;
+        background-color: var(--bg-dark-lighter);
+        border-color: var(--primary-color);
+        color: var(--text-light);
         box-shadow: 0 0 0 0.2rem rgba(159, 96, 0, 0.25);
+      }
+
+      &::placeholder {
+        color: var(--text-muted);
       }
     }
 
     .btn-primary {
-      background: #9f6000;
-      border-color: #9f6000;
+      background: var(--primary-color);
+      border-color: var(--primary-color);
       padding: 0.8rem 3rem;
       border-radius: 30px;
 
       &:hover {
-        background: #7d4b00;
-        border-color: #7d4b00;
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
       }
     }
   `]
