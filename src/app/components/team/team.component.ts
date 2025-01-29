@@ -29,19 +29,19 @@ export class TeamComponent implements OnInit, OnDestroy {
     },
     {
       id: 2,
-      name: 'Luca Bianchi',
-      role: 'Senior Stylist',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374&auto=format&fit=crop',
+      name: 'Sofia Ricci',
+      role: 'Creative Director',
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop',
       specialties: ['Taglio Moderno', 'Colorazione', 'Trattamenti Capelli'],
-      experience: '8 anni di esperienza'
+      experience: '10 anni di esperienza'
     },
     {
       id: 3,
-      name: 'Giuseppe Verdi',
+      name: 'Giulia Marino',
       role: 'Color Specialist',
-      image: 'https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?q=80&w=1374&auto=format&fit=crop',
-      specialties: ['Colorazione Avanzata', 'Trattamenti', 'Balayage Uomo'],
-      experience: '10 anni di esperienza'
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop',
+      specialties: ['Colorazione Avanzata', 'Trattamenti', 'Balayage'],
+      experience: '8 anni di esperienza'
     },
     {
       id: 4,
@@ -53,6 +53,14 @@ export class TeamComponent implements OnInit, OnDestroy {
     },
     {
       id: 5,
+      name: 'Elena Colombo',
+      role: 'Style Innovation Expert',
+      image: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1470&auto=format&fit=crop',
+      specialties: ['Tagli Innovativi', 'Styling Contemporaneo', 'Tecniche Moderne'],
+      experience: '9 anni di esperienza'
+    },
+    {
+      id: 6,
       name: 'Roberto Conti',
       role: 'Beard Master',
       image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1448&auto=format&fit=crop',

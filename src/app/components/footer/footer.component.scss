@@ -1,0 +1,225 @@
+.footer {
+    background: linear-gradient(to bottom, #1a1a1a, #000);
+    color: #fff;
+    padding: 4rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #9f6000, #ffd700, #9f6000);
+    }
+}
+
+.footer-info {
+    h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #9f6000;
+        }
+    }
+
+    p {
+        color: #bbb;
+        line-height: 1.8;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+            background: #9f6000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(159, 96, 0, 0.3);
+        }
+
+        i {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.footer-links {
+    h4 {
+        font-size: 1.3rem;
+        color: #fff;
+        margin-bottom: 1.25rem;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #9f6000;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.25rem;
+
+            &::before {
+                content: '→';
+                position: absolute;
+                left: 0;
+                color: #9f6000;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover::before {
+                transform: translateX(5px);
+            }
+
+            a {
+                color: #bbb;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                font-size: 1rem;
+
+                &:hover {
+                    color: #9f6000;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.footer-contact {
+    h4 {
+        font-size: 1.3rem;
+        color: #fff;
+        margin-bottom: 1.25rem;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #9f6000;
+        }
+    }
+
+    p {
+        color: #bbb;
+        line-height: 2;
+        font-size: 1rem;
+
+        i {
+            color: #9f6000;
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #9f6000;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #bbb;
+
+    .copyright {
+        font-size: 0.95rem;
+
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-links,
+    .footer-contact {
+        text-align: center;
+        margin-top: 2rem;
+
+        h4::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .footer-links ul li {
+        text-align: center;
+        padding-left: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}
