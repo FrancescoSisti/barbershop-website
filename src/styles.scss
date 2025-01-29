@@ -1,14 +1,15 @@
-/* Bootstrap */
-@use 'bootstrap/scss/bootstrap' as bootstrap;
-
 /* Variables */
 @use 'app/styles/variables';
+
+/* Bootstrap */
+@use 'bootstrap/scss/bootstrap';
 
 /* Global Styles */
 body {
     font-family: var(--body-font);
     color: var(--text-color);
     line-height: 1.6;
+    background-color: var(--dark-color);
 }
 
 h1,
@@ -18,7 +19,7 @@ h4,
 h5,
 h6 {
     font-family: var(--title-font);
-    color: var(--dark-color);
+    color: var(--light-color);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -47,6 +48,7 @@ a {
         font-size: 42px;
         margin-bottom: 20px;
         text-transform: uppercase;
+        color: var(--light-color);
     }
 
     p {
@@ -60,11 +62,19 @@ a {
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--light-color);
     transition: var(--transition);
 
     &:focus {
         border-color: var(--primary-color);
         box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25);
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+    }
+
+    &::placeholder {
+        color: var(--text-muted);
     }
 }
 
@@ -80,6 +90,7 @@ a {
     &.btn-primary {
         background-color: var(--primary-color);
         border-color: var(--primary-color);
+        color: var(--light-color);
 
         &:hover {
             background-color: var(--primary-color-dark);
@@ -87,6 +98,14 @@ a {
             transform: translateY(-2px);
         }
     }
+}
+
+/* Cards and Sections */
+.card,
+.section {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
 }
 
 /* Responsive */

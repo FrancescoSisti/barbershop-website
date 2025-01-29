@@ -9,6 +9,7 @@ $text-color: #666666;
 $text-muted: #999999;
 $text-muted-rgb: 153, 153, 153;
 $border-color: #E5E5E5;
+$bg-dark: rgba(12, 12, 14, 0.95);
 
 // Typography
 $title-font: 'Poppins', sans-serif;
@@ -28,7 +29,9 @@ $transition: all 0.3s ease;
     --text-muted: #{$text-muted};
     --text-muted-rgb: #{$text-muted-rgb};
     --border-color: #{$border-color};
+    --bg-dark: #{$bg-dark};
     --title-font: #{$title-font};
     --body-font: #{$body-font};
     --transition: #{$transition};
+    --text-light: #{$light-color};
 }

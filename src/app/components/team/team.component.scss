@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
     z-index: 1;
   }
 
@@ -34,7 +34,7 @@
 
     p {
       font-size: 20px;
-      color: var(--light-color);
+      color: var(--text-color);
       font-weight: 300;
     }
   }
@@ -49,18 +49,19 @@
   }
 
   .team-member {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--secondary-color);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
       transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
     .member-image {
@@ -82,7 +83,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -94,7 +95,7 @@
           font-size: 18px;
           font-weight: 500;
           padding: 15px 25px;
-          background: rgba(var(--primary-color-rgb), 0.9);
+          background: rgba(var(--primary-rgb), 0.9);
           border-radius: 30px;
           text-transform: uppercase;
         }
@@ -145,14 +146,14 @@
         margin-bottom: 20px;
 
         .specialty {
-          background: rgba(255, 255, 255, 0.1);
+          background: rgba(var(--primary-rgb), 0.1);
           color: var(--light-color);
           padding: 8px 16px;
           border-radius: 25px;
           font-size: 14px;
           font-weight: 500;
           transition: all 0.3s ease;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(var(--primary-rgb), 0.2);
 
           &:hover {
             background: var(--primary-color);
@@ -174,7 +175,7 @@
         transition: all 0.3s ease;
         text-transform: uppercase;
         letter-spacing: 1px;
-        border: 1px solid transparent;
+        border: 2px solid var(--primary-color);
         width: fit-content;
         margin: 0 auto;
 
@@ -183,6 +184,7 @@
           border-color: var(--primary-color);
           color: var(--primary-color);
           transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.2);
         }
       }
     }

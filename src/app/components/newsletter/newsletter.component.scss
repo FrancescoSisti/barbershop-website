@@ -1,22 +1,5 @@
 @use '../../../app/styles/variables';
 
-/* Variables */
-:root {
-    --primary-color: #C5A47E;
-    --primary-color-dark: #A88B69;
-    --primary-rgb: 197, 164, 126;
-    --secondary-color: #1A1A1A;
-    --dark-color: #0F0F0F;
-    --light-color: #FFFFFF;
-    --text-color: #666666;
-    --text-muted: #999999;
-    --text-muted-rgb: 153, 153, 153;
-    --border-color: #E5E5E5;
-    --title-font: 'Poppins', sans-serif;
-    --body-font: 'Poppins', sans-serif;
-    --transition: all 0.3s ease;
-}
-
 .newsletter-section {
     background: linear-gradient(135deg, var(--secondary-color) 0%, #2d2d2d 100%);
     padding: 80px 20px;
