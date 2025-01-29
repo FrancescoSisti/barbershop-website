@@ -125,27 +125,27 @@ import { NgFor } from '@angular/common';
 export class ShopComponent {
   products = [
     {
-      name: 'Shampoo Professionale',
-      description: 'Shampoo nutriente per tutti i tipi di capelli',
-      price: 24.99,
+      name: 'Shampoo Professionale Kerastase',
+      description: 'Shampoo nutriente per capelli secchi e danneggiati',
+      price: 29.99,
       image: 'https://images.unsplash.com/photo-1585232351009-aa87416fca90'
     },
     {
-      name: 'Balsamo Ristrutturante',
-      description: 'Balsamo intensivo per capelli danneggiati',
-      price: 29.99,
+      name: 'Maschera Ristrutturante',
+      description: 'Trattamento intensivo per capelli colorati e trattati',
+      price: 34.99,
       image: 'https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c'
     },
     {
-      name: 'Olio per Barba',
-      description: 'Olio nutriente per una barba morbida e curata',
-      price: 19.99,
-      image: 'https://images.unsplash.com/photo-1621607512022-6aecc4fed814'
+      name: 'Olio di Argan Protettivo',
+      description: 'Olio nutriente per capelli luminosi e setosi',
+      price: 39.99,
+      image: 'https://images.unsplash.com/photo-1598452963314-b09f397a5c48'
     },
     {
-      name: 'Cera Modellante',
-      description: 'Cera a tenuta forte per uno styling perfetto',
-      price: 21.99,
+      name: 'Spray Termoprotettore',
+      description: 'Protezione dal calore per styling e piastra',
+      price: 26.99,
       image: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0'
     }
   ];

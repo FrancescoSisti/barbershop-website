@@ -1,35 +1,35 @@
 <header [class.scrolled]="isScrolled" [class.hidden]="isHidden" class="mobile-header">
-    <div class="header-container">
-        <!-- Logo Section -->
-        <div class="logo-section">
-            <div class="logo-wrapper">
-                <a href="#home" (click)="scrollToSection('home', $event)">
-                    <span class="logo-text">Cipri</span>
-                    <span class="logo-separator"></span>
-                    <span class="logo-accent">Barber</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button class="menu-btn" [class.active]="isMenuOpen" (click)="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+  <div class="header-container">
+    <!-- Logo Section -->
+    <div class="logo-section">
+      <div class="logo-wrapper">
+        <a href="#home" (click)="scrollToSection('home', $event)">
+          <span class="logo-text">Cipri</span>
+          <span class="logo-separator"></span>
+          <span class="logo-accent">Parrucchieri</span>
+        </a>
+      </div>
     </div>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" [class.open]="isMenuOpen">
-        <nav>
-            <ul>
-                <li><a href="#home" (click)="scrollToSection('home', $event)">Home</a></li>
-                <li><a href="#services" (click)="scrollToSection('services', $event)">Servizi</a></li>
-                <li><a href="#gallery" (click)="scrollToSection('gallery', $event)">Galleria</a></li>
-                <li><a href="#reviews" (click)="scrollToSection('reviews', $event)">Recensioni</a></li>
-                <li><a href="#shop" (click)="scrollToSection('shop', $event)">Shop</a></li>
-                <li><a href="#booking" (click)="scrollToSection('booking', $event)">Prenota</a></li>
-            </ul>
-        </nav>
-    </div>
+    <!-- Mobile Menu Button -->
+    <button class="menu-btn" [class.active]="isMenuOpen" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <nav>
+      <ul>
+        <li><a href="#home" (click)="scrollToSection('home', $event)">Home</a></li>
+        <li><a href="#services" (click)="scrollToSection('services', $event)">Servizi</a></li>
+        <li><a href="#gallery" (click)="scrollToSection('gallery', $event)">Galleria</a></li>
+        <li><a href="#reviews" (click)="scrollToSection('reviews', $event)">Recensioni</a></li>
+        <li><a href="#shop" (click)="scrollToSection('shop', $event)">Shop</a></li>
+        <li><a href="#booking" (click)="scrollToSection('booking', $event)">Prenota</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>

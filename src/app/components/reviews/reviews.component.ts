@@ -111,25 +111,25 @@ declare const AOS: any;
 export class ReviewsComponent implements OnInit {
   reviews = [
     {
-      name: 'Marco Rossi',
+      name: 'Sofia Martini',
       rating: 5,
-      text: 'Servizio eccellente! Angelo è un vero professionista che sa consigliare il taglio perfetto per ogni cliente. Ambiente accogliente e risultato sempre impeccabile.',
+      text: 'Servizio eccellente! La parrucchiera ha saputo interpretare perfettamente ciò che desideravo. Il colore è esattamente come lo volevo e il taglio è perfetto. Tornerò sicuramente!',
       date: '2 settimane fa',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e'
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'
     },
     {
-      name: 'Luca Bianchi',
+      name: 'Laura Conti',
       rating: 5,
-      text: 'Il miglior barbiere della zona! Prezzi onesti, grande professionalità e risultati sempre al top. Lo consiglio vivamente.',
+      text: 'Ho fatto le extension e sono rimasta davvero soddisfatta! Professionalità al top e risultato naturale. Il team è molto attento alle esigenze delle clienti.',
       date: '1 mese fa',
-      avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61'
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
     },
     {
-      name: 'Giuseppe Verdi',
+      name: 'Giulia Romano',
       rating: 5,
-      text: 'Esperienza fantastica! Oltre al taglio impeccabile, l\'atmosfera è sempre piacevole e rilassante. Un posto dove tornare.',
+      text: 'Finalmente ho trovato il salone perfetto! Oltre alla competenza tecnica, apprezzo molto i consigli personalizzati per la cura dei capelli. Ambiente accogliente e risultati sempre impeccabili.',
       date: '3 settimane fa',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d'
+      avatar: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb'
     }
   ];
 
