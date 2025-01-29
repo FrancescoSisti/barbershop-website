@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TeamComponent } from './components/team/team.component';
 import { CommonModule } from '@angular/common';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,8 @@ import { CommonModule } from '@angular/common';
     ShopComponent,
     ContactComponent,
     FooterComponent,
-    TeamComponent
+    TeamComponent,
+    NewsletterComponent
   ],
   templateUrl: './app.component.html',
   styles: [`
