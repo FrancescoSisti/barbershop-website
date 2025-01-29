@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-booking',
@@ -117,7 +118,7 @@ import { NgFor } from '@angular/common';
     }
   `]
 })
-export class BookingComponent {
+export class BookingComponent implements OnInit {
   services = [
     'Taglio Classico',
     'Barba',
@@ -141,6 +142,17 @@ export class BookingComponent {
     phone: '',
     email: ''
   };
+
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    // Recupera i parametri dalla URL
+    this.route.queryParams.subscribe(params => {
+      if (params['serviceName']) {
+        this.bookingData.service = params['serviceName'];
+      }
+    });
+  }
 
   onSubmit(event: Event) {
     event.preventDefault();

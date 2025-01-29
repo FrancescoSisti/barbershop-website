@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { NgFor } from '@angular/common';
 
 interface Service {
@@ -14,7 +14,7 @@ interface Service {
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RouterModule],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
@@ -58,7 +58,7 @@ export class ServicesComponent implements OnInit {
       description: 'Colorazione professionale con prodotti di alta qualità.',
       price: 45,
       duration: 60,
-      image: 'https://images.unsplash.com/photo-1560869713-ba42066c0e23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+      image: 'https://images.unsplash.com/photo-1620331311520-246422fd82f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'
     },
     {
       id: 6,

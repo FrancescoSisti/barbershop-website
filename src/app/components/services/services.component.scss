@@ -1,121 +1,204 @@
 .services-section {
-  padding: 6rem 0;
+  padding: 8rem 0;
   background-color: var(--background-color);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    opacity: 0.3;
+  }
 
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--primary-color);
+      margin: 2rem auto 0;
+      border-radius: 2px;
+    }
 
     .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
+      font-size: 3rem;
+      font-weight: 800;
       color: var(--text-color);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-family: var(--title-font);
+      letter-spacing: -0.5px;
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primary-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: right;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
 
     .section-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: var(--text-secondary);
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.8;
+      opacity: 0.9;
     }
   }
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
   }
 
   .service-card {
     background: var(--card-background);
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+
+      .service-image img {
+        transform: scale(1.05);
+      }
     }
 
     .service-image {
       width: 100%;
-      height: 200px;
+      height: 250px;
       overflow: hidden;
+      position: relative;
+      background: var(--background-color);
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-
-      &:hover img {
-        transform: scale(1.1);
+        transition: transform 0.5s ease;
+        opacity: 0.9;
       }
     }
 
     .service-content {
-      padding: 2rem;
-      text-align: center;
+      padding: 2.5rem;
+      text-align: left;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .service-title {
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 1.75rem;
+      font-weight: 700;
       color: var(--text-color);
       margin-bottom: 1rem;
       font-family: var(--title-font);
+      position: relative;
+      padding-bottom: 1rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: var(--primary-color);
+        border-radius: 1px;
+      }
     }
 
     .service-description {
       color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      flex-grow: 1;
     }
 
     .service-price {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: rgba(var(--primary-color-rgb), 0.05);
+      border-radius: 1rem;
 
       .price {
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-size: 1.8rem;
+        font-weight: 800;
         color: var(--primary-color);
+        font-family: var(--title-font);
       }
 
       .duration {
         color: var(--text-secondary);
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-weight: 500;
       }
     }
 
     .book-button {
       background: var(--primary-color);
       color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 2rem;
+      border: 2px solid var(--primary-color);
+      padding: 1rem 2rem;
+      border-radius: 3rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
       width: 100%;
+      font-size: 1.1rem;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      margin-top: auto;
 
       &:hover {
         background: var(--primary-color-dark);
+        border-color: var(--primary-color-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.2);
       }
     }
   }
@@ -123,24 +206,40 @@
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 4rem 0;
+    padding: 5rem 0;
+
+    .container {
+      padding: 0 1.5rem;
+    }
 
     .section-header {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
 
       .section-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
       }
     }
 
     .services-grid {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .service-card {
       .service-image {
-        height: 180px;
+        height: 220px;
+      }
+
+      .service-content {
+        padding: 2rem;
+      }
+
+      .service-title {
+        font-size: 1.5rem;
       }
     }
   }
