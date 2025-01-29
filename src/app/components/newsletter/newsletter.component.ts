@@ -1,16 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { NewsletterMobileComponent } from '../newsletter-mobile/newsletter-mobile.component';
 
 @Component({
   selector: 'app-newsletter',
   templateUrl: './newsletter.component.html',
   styleUrls: ['./newsletter.component.scss'],
   standalone: true,
-  imports: [FormsModule]
+  imports: [FormsModule, CommonModule, NewsletterMobileComponent]
 })
 export class NewsletterComponent {
   email: string = '';
   privacyAccepted: boolean = false;
+  isMobile: boolean = false;
+
+  constructor() {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.isMobile = window.innerWidth < 768;
+  }
 
   onSubscribe() {
     if (!this.email || !this.privacyAccepted) {

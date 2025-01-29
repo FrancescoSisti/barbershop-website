@@ -1,0 +1,126 @@
+.newsletter-mobile {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2d2d2d 100%);
+    padding: 2rem 1rem;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .newsletter-content {
+        text-align: center;
+        padding: 0 0.5rem;
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--light-color), #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            padding: 0 0.5rem;
+        }
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 320px;
+
+        .email-input {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light-color);
+            font-size: 1rem;
+            -webkit-appearance: none;
+            transition: all 0.3s ease;
+
+            &:focus {
+                outline: none;
+                background: rgba(255, 255, 255, 0.15);
+                box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+            }
+
+            &::placeholder {
+                color: var(--text-muted);
+                opacity: 0.8;
+            }
+        }
+
+        .subscribe-btn {
+            width: 100%;
+            padding: 0.875rem;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #d4af37, #f2d272);
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+
+            &:active {
+                transform: scale(0.98);
+                background: linear-gradient(45deg, #c49b2f, #e5c569);
+            }
+        }
+
+        .privacy-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                border-radius: 4px;
+                border: 2px solid #d4af37;
+                appearance: none;
+                background: transparent;
+                position: relative;
+                cursor: pointer;
+                flex-shrink: 0;
+                -webkit-tap-highlight-color: transparent;
+
+                &:checked {
+                    background-color: #d4af37;
+
+                    &::after {
+                        content: '✓';
+                        position: absolute;
+                        color: var(--secondary-color);
+                        font-size: 12px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+
+            span {
+                flex: 1;
+                text-align: left;
+            }
+        }
+    }
+}

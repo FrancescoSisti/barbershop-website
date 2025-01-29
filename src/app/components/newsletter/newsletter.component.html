@@ -1,23 +1,30 @@
-<section class="newsletter-section">
+<ng-container *ngIf="!isMobile">
+  <section class="newsletter-section">
     <div class="newsletter-container">
-        <div class="newsletter-content">
-            <h2>Resta Aggiornato</h2>
-            <p>Iscriviti alla nostra newsletter per ricevere le ultime novità, offerte speciali e consigli di stile</p>
-            <div class="newsletter-form">
-                <div class="input-group">
-                    <input type="email" placeholder="Il tuo indirizzo email" class="email-input" [(ngModel)]="email">
-                    <button class="subscribe-btn" (click)="onSubscribe()">Iscriviti</button>
-                </div>
-                <div class="form-footer">
-                    <label class="privacy-checkbox">
-                        <input type="checkbox" [(ngModel)]="privacyAccepted">
-                        <span>Accetto la privacy policy</span>
-                    </label>
-                </div>
-            </div>
+      <div class="newsletter-content" data-aos="fade-right" data-aos-duration="1000">
+        <h2>Resta Aggiornato</h2>
+        <p>Iscriviti alla nostra newsletter per ricevere le ultime novità, offerte speciali e consigli di stile</p>
+        <div class="newsletter-form">
+          <div class="input-group">
+            <input type="email" placeholder="Il tuo indirizzo email" class="email-input" [(ngModel)]="email"
+              [attr.aria-label]="'Indirizzo email per la newsletter'">
+            <button class="subscribe-btn" (click)="onSubscribe()" [attr.aria-label]="'Iscriviti alla newsletter'">
+              Iscriviti
+            </button>
+          </div>
+          <div class="form-footer">
+            <label class="privacy-checkbox">
+              <input type="checkbox" [(ngModel)]="privacyAccepted" [attr.aria-label]="'Accetta la privacy policy'">
+              <span>Accetto la privacy policy</span>
+            </label>
+          </div>
         </div>
-        <div class="newsletter-decoration">
-            <div class="decoration-element"></div>
-        </div>
+      </div>
+      <div class="newsletter-decoration" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="decoration-element"></div>
+      </div>
     </div>
-</section>
+  </section>
+</ng-container>
+
+<app-newsletter-mobile *ngIf="isMobile"></app-newsletter-mobile>
