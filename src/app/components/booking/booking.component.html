@@ -1,54 +1,77 @@
 <section id="booking" class="booking">
-    <div class="container">
-        <div class="section-header">
-            <h2>Prenota il Tuo Appuntamento</h2>
-            <p>Scegli il servizio, la data e l'orario che preferisci</p>
-        </div>
-
-        <div class="booking-content">
-            <div class="booking-form">
-                <form (submit)="onSubmit($event)">
-                    <div class="form-group">
-                        <label for="service">Servizio</label>
-                        <select id="service" [(ngModel)]="bookingData.service" name="service">
-                            <option value="">Seleziona un servizio</option>
-                            <option *ngFor="let service of services" [value]="service">{{service}}</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="date">Data</label>
-                        <input type="date" id="date" [(ngModel)]="bookingData.date" name="date">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="time">Orario</label>
-                        <select id="time" [(ngModel)]="bookingData.time" name="time">
-                            <option value="">Seleziona un orario</option>
-                            <option *ngFor="let time of availableTimes" [value]="time">{{time}}</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Nome e Cognome</label>
-                        <input type="text" id="name" [(ngModel)]="bookingData.name" name="name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Telefono</label>
-                        <input type="tel" id="phone" [(ngModel)]="bookingData.phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" [(ngModel)]="bookingData.email" name="email">
-                    </div>
-
-                    <div class="form-submit">
-                        <button type="submit">Prenota Ora</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <h2>Prenota il Tuo Appuntamento</h2>
+      <p>Scegli il servizio, la data e l'orario che preferisci</p>
     </div>
+
+    <div class="booking-content">
+      <div class="booking-form">
+        <form (submit)="onSubmit($event)">
+          <!-- Selezione Servizio -->
+          <div class="form-group">
+            <label for="service">Servizio</label>
+            <select id="service" [(ngModel)]="bookingData.service" name="service" required>
+              <option value="">Seleziona un servizio</option>
+              <option *ngFor="let service of services" [value]="service">
+                {{service}}
+              </option>
+            </select>
+          </div>
+
+          <!-- Selezione Barbiere -->
+          <div class="form-group">
+            <label for="teamMember">Barbiere</label>
+            <select id="teamMember" [(ngModel)]="bookingData.teamMember" name="teamMember" required>
+              <option value="">Seleziona un barbiere</option>
+              <option *ngFor="let member of filterAvailableBarbers()" [value]="member.id">
+                {{member.name}} - {{member.role}}
+              </option>
+            </select>
+          </div>
+
+          <!-- Calendario -->
+          <div class="form-group">
+            <label for="date">Data</label>
+            <input type="date" id="date" [(ngModel)]="bookingData.date" name="date" [min]="minDate" [max]="maxDate"
+              (change)="onDateSelect($event)" required>
+          </div>
+
+          <!-- Orari Disponibili -->
+          <div class="form-group" *ngIf="bookingData.date && hasAvailableSlots(bookingData.date)">
+            <label for="time">Orario</label>
+            <select id="time" [(ngModel)]="bookingData.time" name="time" required>
+              <option value="">Seleziona un orario</option>
+              <option *ngFor="let time of getAvailableSlots(bookingData.date)" [value]="time">
+                {{time}}
+              </option>
+            </select>
+          </div>
+
+          <!-- Informazioni Personali -->
+          <div class="form-group">
+            <label for="name">Nome e Cognome</label>
+            <input type="text" id="name" [(ngModel)]="bookingData.name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefono</label>
+            <input type="tel" id="phone" [(ngModel)]="bookingData.phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="bookingData.email" name="email" required>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit"
+              [disabled]="!bookingData.service || !bookingData.date || !bookingData.time || !bookingData.teamMember">
+              Prenota Ora
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
