@@ -82,4 +82,14 @@ export class ServicesComponent implements OnInit {
       }
     });
   }
+
+  selectService(service: Service): void {
+    // Trova il componente di prenotazione e imposta il servizio selezionato
+    const bookingForm = document.querySelector('#booking select[name="service"]') as HTMLSelectElement;
+    if (bookingForm) {
+      bookingForm.value = service.name;
+      // Trigger dell'evento change per aggiornare il modello
+      bookingForm.dispatchEvent(new Event('change'));
+    }
+  }
 }

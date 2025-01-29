@@ -17,8 +17,7 @@
                         <span class="price">€{{service.price}}</span>
                         <span class="duration">{{service.duration}} min</span>
                     </div>
-                    <a [routerLink]="['/booking']" [queryParams]="{serviceId: service.id, serviceName: service.name}"
-                        class="book-button">
+                    <a href="#booking" (click)="selectService(service)" class="book-button">
                         Prenota Ora
                     </a>
                 </div>
