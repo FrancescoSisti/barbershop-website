@@ -1,3 +1,17 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+html {
+    @include mat.theme((color: (theme-type: light,
+                primary: mat.$azure-palette,
+                tertiary: mat.$blue-palette,
+            ),
+            typography: Roboto,
+            density: 0,
+        ));
+}
+
 /* Variables */
 :root {
     --primary-color: #9f6000;
@@ -322,5 +336,24 @@ section {
 
     &:hover {
         box-shadow: var(--shadow-lg);
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.image-modal-container {
+    .mat-mdc-dialog-container {
+        padding: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.9);
     }
 }

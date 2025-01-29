@@ -10,6 +10,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TeamComponent } from './components/team/team.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -27,7 +28,8 @@ import { CommonModule } from '@angular/common';
     ReviewsComponent,
     ShopComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    TeamComponent
   ],
   templateUrl: './app.component.html',
   styles: [`

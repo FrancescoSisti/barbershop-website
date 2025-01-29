@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ImageModalComponent } from './image-modal.component';
 
 declare const AOS: any;
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, MatDialogModule],
   template: `
     <section id="gallery" class="gallery py-5">
       <div class="container">
@@ -87,6 +89,8 @@ export class GalleryComponent implements OnInit {
     'https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3'
   ];
 
+  constructor(private dialog: MatDialog) { }
+
   ngOnInit() {
     // Initialize AOS animation library
     if (typeof AOS !== 'undefined') {
@@ -95,7 +99,11 @@ export class GalleryComponent implements OnInit {
   }
 
   openImage(image: string) {
-    // In a real application, this would open a lightbox or modal
-    window.open(image, '_blank');
+    this.dialog.open(ImageModalComponent, {
+      data: { image },
+      maxWidth: '95vw',
+      maxHeight: '95vh',
+      panelClass: 'image-modal-container'
+    });
   }
 }
