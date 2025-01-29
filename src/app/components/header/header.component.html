@@ -3,18 +3,24 @@
     <!-- Navigation Menu Left -->
     <nav class="nav-left" [class.open]="!isMenuCollapsed">
       <ul class="nav-list">
-        <li style="--i: 0"><a href="#home" (click)="scrollToSection('home', $event)">
+        <li style="--i: 0">
+          <a href="#home" [class.active]="isActive('home')" (click)="scrollToSection('home', $event)">
             <span class="nav-dot"></span>
             <span>Home</span>
-          </a></li>
-        <li style="--i: 1"><a href="#services" (click)="scrollToSection('services', $event)">
+          </a>
+        </li>
+        <li style="--i: 1">
+          <a href="#services" [class.active]="isActive('services')" (click)="scrollToSection('services', $event)">
             <span class="nav-dot"></span>
             <span>Servizi</span>
-          </a></li>
-        <li style="--i: 2"><a href="#gallery" (click)="scrollToSection('gallery', $event)">
+          </a>
+        </li>
+        <li style="--i: 2">
+          <a href="#gallery" [class.active]="isActive('gallery')" (click)="scrollToSection('gallery', $event)">
             <span class="nav-dot"></span>
             <span>Galleria</span>
-          </a></li>
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -32,18 +38,24 @@
     <!-- Navigation Menu Right -->
     <nav class="nav-right" [class.open]="!isMenuCollapsed">
       <ul class="nav-list">
-        <li style="--i: 3"><a href="#reviews" (click)="scrollToSection('reviews', $event)">
+        <li style="--i: 3">
+          <a href="#reviews" [class.active]="isActive('reviews')" (click)="scrollToSection('reviews', $event)">
             <span class="nav-dot"></span>
             <span>Recensioni</span>
-          </a></li>
-        <li style="--i: 4"><a href="#shop" (click)="scrollToSection('shop', $event)">
+          </a>
+        </li>
+        <li style="--i: 4">
+          <a href="#shop" [class.active]="isActive('shop')" (click)="scrollToSection('shop', $event)">
             <span class="nav-dot"></span>
             <span>Shop</span>
-          </a></li>
-        <li style="--i: 5"><a href="#booking" (click)="scrollToSection('booking', $event)">
+          </a>
+        </li>
+        <li style="--i: 5">
+          <a href="#booking" [class.active]="isActive('booking')" (click)="scrollToSection('booking', $event)">
             <span class="nav-dot"></span>
             <span>Prenota</span>
-          </a></li>
+          </a>
+        </li>
       </ul>
     </nav>
 
