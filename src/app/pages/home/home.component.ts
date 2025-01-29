@@ -8,7 +8,9 @@ import { ShopComponent } from '../../components/shop/shop.component';
 import { BookingComponent } from '../../components/booking/booking.component';
 import { ContactComponent } from '../../components/contact/contact.component';
 import { HeaderComponent } from '../../components/header/header.component';
+import { HeaderMobileComponent } from '../../components/header-mobile/header-mobile.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { NewsletterComponent } from '../../components/newsletter/newsletter.component';
 import { ViewportScroller } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 
@@ -19,6 +21,7 @@ import { Router, ActivatedRoute, RouterModule } from '@angular/router';
         CommonModule,
         RouterModule,
         HeaderComponent,
+        HeaderMobileComponent,
         FooterComponent,
         HeroComponent,
         ServicesComponent,
@@ -26,10 +29,12 @@ import { Router, ActivatedRoute, RouterModule } from '@angular/router';
         ReviewsComponent,
         ShopComponent,
         BookingComponent,
-        ContactComponent
+        ContactComponent,
+        NewsletterComponent
     ],
     template: `
-    <app-header></app-header>
+    <app-header class="d-none d-lg-block"></app-header>
+    <app-header-mobile class="d-block d-lg-none"></app-header-mobile>
     <main>
       <app-hero id="home"></app-hero>
       <app-services id="services"></app-services>
@@ -39,6 +44,7 @@ import { Router, ActivatedRoute, RouterModule } from '@angular/router';
       <app-booking id="booking"></app-booking>
       <app-contact id="contact"></app-contact>
     </main>
+    <app-newsletter></app-newsletter>
     <app-footer></app-footer>
   `
 })
